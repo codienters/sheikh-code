@@ -1,7 +1,5 @@
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 import Cli from "@/components/cli";
-import { SignedIn, SignedOut } from "@clerk/nextjs";
-import Cli from "@/components/cli";
 
 export default function Home() {
   return (
