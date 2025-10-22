@@ -1,7 +1,6 @@
 "use client";
 
-import React from 'react';
-import { useCompletion } from '@ai-sdk/react';
+import { useCompletion } from "@ai-sdk/react";
 
 export default function Cli() {
   const { completion, input, handleInputChange, handleSubmit } = useCompletion();
@@ -10,12 +9,7 @@ export default function Cli() {
     <div>
       <div className="border p-4 rounded-md">
         <div className="flex flex-col space-y-2">
-          {completion && (
-            <div className="flex">
-              <span className="text-gray-400 mr-2">{'>'}</span>
-              <p>{completion}</p>
-            </div>
-          )}
+          {completion}
         </div>
         <form onSubmit={handleSubmit} className="mt-4">
           <div className="flex">
@@ -29,10 +23,6 @@ export default function Cli() {
             />
           </div>
         </form>
-      </div>
-    </div>
-  );
-}
       </div>
     </div>
   );
